@@ -13,7 +13,7 @@ for website in websites:  # website의 단어는 내가 정하는 거
     if not website.startswith("https://"):
         website = f"https://{website}"
     response = get(website)
-    if response.status_code == 200:
+    if response.status_code == 200:  # 200 은 HTTP 상태 코드
         print(f"{website} is OK")
         results[website] = "OK"
     else:

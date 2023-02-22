@@ -29,6 +29,7 @@ def extract_jobs(term):
                 location = info.find_all("div", class_="location")
                 wage = location[-1]
                 regions = location[:-1]
+                regions = regions['location']
 
                 # print(title.string, company.string, wage.string)
                 title = title.string
